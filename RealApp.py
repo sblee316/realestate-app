@@ -10,7 +10,7 @@ NAVER_COOKIE = "NNB=BNRWYFSV5QCWQ; NAC=aHfIDIBKjunGA; _fwb=53hk3J7S4SJqiwRur46zD
 NAVER_AUTH = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlJFQUxFU1RBVEUiLCJpYXQiOjE3NTEyNjM1MDksImV4cCI6MTc1MTI3NDMwOX0.QF5wiBIQFeC_U1lJ3wlnioozAbXBgUvaC5rHWlOAzho"
 
 # 법정동코드 데이터 불러오기 (탭 구분)
-law_df = pd.read_csv('law_code.txt', sep='\t', dtype=str, encoding='cp949')
+law_df = pd.read_csv('law_code.csv', dtype=str, encoding='utf-8')
 law_df = law_df[law_df['폐지여부'] == '존재']  # 폐지된 동 제외
 
 # 시/도, 시/군/구, 동/읍/면 컬럼 분리
